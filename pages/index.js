@@ -25,7 +25,7 @@ export default function Home() {
       let count = await tasks.methods.taskCounter().call();
       await auxFunction(count, tasks);
     };
-  /*   fetchSmart(); */
+    fetchSmart();
   }, []);
   const auxFunction = async (count, contract) => {
     let aux = [];
@@ -69,7 +69,12 @@ export default function Home() {
       <main className={classes.main}>
         {!tasks || !accounts || !web3 ? (
           <div className={classes.divLoader}>
-          <div className={classes.loader}><div></div></div>
+            <h4 className={classes.message}>
+              You must install metamask in your browser
+            </h4>
+            <div className={classes.loader}>
+              <div></div>
+            </div>
           </div>
         ) : (
           <Fragment>

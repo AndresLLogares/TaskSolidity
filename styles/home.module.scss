@@ -29,6 +29,22 @@ $Black: #231b1b;
   align-items: center;
   justify-content: center;
   margin-top: 10%;
+  flex-direction: column;
+}
+
+.message{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  font-family: "Oswald", sans-serif;
+  font-size: 5vh;
+  color: $ARed;
+  margin-top: 1%;
+  margin-bottom: 5%;
+  letter-spacing: 2px;
+  font-weight: bold;
 }
 
 .loader {
