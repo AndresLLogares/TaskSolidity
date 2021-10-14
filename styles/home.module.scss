@@ -1,0 +1,81 @@
+$Gray: #2b2d42;
+$Blue: #8d99ae;
+$White: #edf2f4;
+$Red: #ef233c;
+$ARed: #d90429;
+$Black: #231b1b;
+
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@300&family=Oswald:wght@300&family=Roboto:wght@300&display=swap");
+
+.fonts {
+  font-family: "Noto Sans Mono", monospace;
+  font-family: "Oswald", sans-serif;
+  font-family: "Roboto", sans-serif;
+}
+
+.main {
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+  height: fit-content;
+  align-items: center;
+  flex-direction: column;
+  justify-content: flex-start;
+  background-color: $White;
+}
+
+.flexCenter {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+  text-align: center;
+  flex-direction: row;
+}
+
+.flexRow {
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+  justify-content: space-around;
+  text-align: center;
+  flex-direction: row;
+  margin-bottom: 5%;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  font-family: "Oswald", sans-serif;
+  font-size: 8vh;
+  color: $ARed;
+  margin-top: 1%;
+  margin-bottom: 5%;
+  letter-spacing: 2px;
+  font-weight: bold;
+}
+
+.icons {
+  width: 3rem;
+  height: 3rem;
+  margin-left: 2%;
+  color: $ARed;
+}
+
+@media (max-width: 600px) {
+  .flexRow {
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .title {
+    font-size: 5vh;
+  }
+  .icons {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+}

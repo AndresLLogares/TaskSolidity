@@ -1,0 +1,130 @@
+$Gray: #2b2d42;
+$Blue: #8d99ae;
+$White: #edf2f4;
+$Red: #ef233c;
+$ARed: #d90429;
+$Black: #231b1b;
+$Pink: #ffffffff;
+
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@300&family=Oswald:wght@300&family=Roboto:wght@300&display=swap");
+
+.fonts {
+  font-family: "Noto Sans Mono", monospace;
+  font-family: "Oswald", sans-serif;
+  font-family: "Roboto", sans-serif;
+}
+
+.main {
+  align-items: center;
+  display: flex;
+  width: 40%;
+  background-color: $Pink;
+  border-radius: 10px 10px 10px 10px;
+  border: solid 0.2rem $Black;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.title {
+  font-family: "Noto Sans Mono", monospace;
+  font-size: 3vh;
+  font-weight: bold;
+  color: $Black;
+  margin-bottom: 3%;
+  margin-top: 3%;
+}
+
+.divCenter {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+}
+
+.eachInput {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-top: 1.5%;
+  margin-bottom: 1.5%;
+}
+
+.label {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: center;
+  width: 100%;
+  font-family: "Roboto", sans-serif;
+  font-size: 2vh;
+  color: $Black;
+  font-weight: bold;
+  margin-bottom: 1%;
+  margin-top: 1%;
+}
+
+.icons {
+  width: 2rem;
+  height: 2rem;
+  color: $ARed;
+}
+
+.input {
+  width: 40%;
+  height: 3rem;
+  border-radius: 10px 10px 10px 10px;
+  border: solid 0.2rem $Black;
+  background-color: $White;
+  font-family: "Roboto", sans-serif;
+  font-size: 2vh;
+  font-weight: bold;
+  color: $Black;
+  &:focus {
+    transition-duration: 1s;
+    width: 100%;
+    border: solid 0.2rem $Black;
+    background-color: $Pink;
+  }
+  &:hover {
+    transition-duration: 1s;
+    width: 100%;
+    border: solid 0.2rem $Black;
+    background-color: $Pink;
+  }
+}
+
+.buttonSubmit {
+  margin-top: 2%;
+  margin-bottom: 2%;
+  width: 30%;
+  height: 4rem;
+  border-radius: 10px 10px 10px 10px;
+  background-color: $ARed;
+  border: solid 0.2rem $Black;
+  color: $White;
+  font-family: "Noto Sans Mono", monospace;
+  font-size: 3vh;
+  font-weight: bold;
+  &:hover {
+    transition-duration: 1s;
+    cursor: url(../images/pointer.png), default;
+    box-shadow: 10px 10px $Black;
+  }
+}
+@media (max-width: 600px) {
+  .main {
+    width: 90%;
+    margin-bottom: 5%;
+  }
+  .eachInput {
+    width: 80%;
+  }
+  .buttonSubmit {
+    width: 50%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+  }
+}
