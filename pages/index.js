@@ -25,7 +25,7 @@ export default function Home() {
       let count = await tasks.methods.taskCounter().call();
       await auxFunction(count, tasks);
     };
-    fetchSmart();
+  /*   fetchSmart(); */
   }, []);
   const auxFunction = async (count, contract) => {
     let aux = [];
@@ -68,7 +68,9 @@ export default function Home() {
       </Head>
       <main className={classes.main}>
         {!tasks || !accounts || !web3 ? (
-          <h1>...Loading...</h1>
+          <div className={classes.divLoader}>
+          <div className={classes.loader}><div></div></div>
+          </div>
         ) : (
           <Fragment>
             <div className={classes.flexCenter}>
