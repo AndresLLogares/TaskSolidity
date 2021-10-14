@@ -5,7 +5,7 @@ import classes from "../styles/home.module.scss";
 import Form from "../components/Form";
 import TaskComponent from "../components/Tasks";
 import { Solidity } from "@styled-icons/simple-icons/Solidity";
-import { ethers } from "ethers";
+import { Zoom } from "react-awesome-reveal";
 
 const auxFunction = (array) => {};
 export default function Home() {
@@ -68,29 +68,35 @@ export default function Home() {
       </Head>
       <main className={classes.main}>
         {!tasks || !accounts || !web3 ? (
-          <div className={classes.divLoader}>
-            <h4 className={classes.message}>
-              You must install metamask in your browser
-            </h4>
-            <div className={classes.loader}>
-              <div></div>
+          <Zoom className={classes.fade}>
+            <div className={classes.divLoader}>
+              <h4 className={classes.message}>
+                You must install metamask in your browser
+              </h4>
+              <div className={classes.loader}>
+                <div></div>
+              </div>
             </div>
-          </div>
+          </Zoom>
         ) : (
           <Fragment>
-            <div className={classes.flexCenter}>
-              <h4 className={classes.title}>
-                Tasks Solidity <Solidity className={classes.icons} />
-              </h4>
-            </div>
-            <div className={classes.flexRow}>
-              <Form createTask={createTask} />
-              <TaskComponent
-                Tasks={arrayTasks}
-                modifyTask={modifyTask}
-                deleteTask={deleteTask}
-              />
-            </div>
+            <Zoom className={classes.fade}>
+              <div className={classes.flexCenter}>
+                <h4 className={classes.title}>
+                  Tasks Solidity <Solidity className={classes.icons} />
+                </h4>
+              </div>
+            </Zoom>
+            <Zoom className={classes.fade}>
+              <div className={classes.flexRow}>
+                <Form createTask={createTask} />
+                <TaskComponent
+                  Tasks={arrayTasks}
+                  modifyTask={modifyTask}
+                  deleteTask={deleteTask}
+                />
+              </div>
+            </Zoom>
           </Fragment>
         )}
       </main>
